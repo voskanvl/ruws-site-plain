@@ -3,6 +3,7 @@ import { Screens } from "../../Screens";
 export interface StoreState {
     block: boolean;
     activeScreenNumber: number;
+    previousScreenNumber: number;
     min: number;
     max: number;
     inc: () => void;
@@ -11,27 +12,30 @@ export interface StoreState {
 }
 
 const inc = (state: StoreState) => {
-    const result =
-        state.activeScreenNumber + 1 > state.max
-            ? state.activeScreenNumber
-            : state.activeScreenNumber + 1;
-    return { ...state, activeScreenNumber: result };
+    if (state.activeScreenNumber + 1 > state.max) return { ...state };
+    return {
+        ...state,
+        activeScreenNumber: state.activeScreenNumber + 1,
+        previousScreenNumber: state.activeScreenNumber,
+    };
 };
 const dec = (state: StoreState) => {
-    const result =
-        state.activeScreenNumber - 1 < state.min
-            ? state.activeScreenNumber
-            : state.activeScreenNumber - 1;
-    return { ...state, activeScreenNumber: result };
+    if (state.activeScreenNumber - 1 < state.min) return { ...state };
+    return {
+        ...state,
+        activeScreenNumber: state.activeScreenNumber - 1,
+        previousScreenNumber: state.activeScreenNumber,
+    };
 };
 const setScreenHandler = (x: number) => (state: StoreState) => {
-    const result = x < state.min || x > state.max ? state.activeScreenNumber : x;
-    return { ...state, activeScreenNumber: result };
+    if (x < state.min || x > state.max) return { ...state };
+    return { ...state, activeScreenNumber: x, previousScreenNumber: state.activeScreenNumber };
 };
 
 const store = create<StoreState>(set => ({
     block: false,
     activeScreenNumber: 0,
+    previousScreenNumber: 0,
     min: 0,
     max: document.querySelectorAll("section.screen").length - 1,
     inc: () => set(inc),

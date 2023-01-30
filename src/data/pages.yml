@@ -6,7 +6,6 @@ pages:
     name: "Home"
     menu: "Главная"
     path: "/"
-    element: <First />
     caption: ""
     background: "../assets/images/main.jpg"
     
@@ -17,7 +16,6 @@ pages:
     name: "Projects"
     menu: "Проекты"
     path: "/projects"
-    element: <Projects />
     caption: ""
     background: "../assets/images/main.jpg"
     
@@ -28,7 +26,6 @@ pages:
     name: "Services"
     menu: "Услуги"
     path: "/services"
-    element: <Services />
     caption: ""
     background: "../assets/images/lines.png"
     
@@ -39,7 +36,6 @@ pages:
     name: "Price"
     menu: "Прайс"
     path: "/price"
-    element: <Price />
     caption: ""
     background: "../assets/images/lines.png"
     
@@ -50,7 +46,6 @@ pages:
     name: "About"
     menu: "О компании"
     path: "/about"
-    element: <About />
     caption: ""
     background: "../assets/images/lines.png"
     
@@ -61,7 +56,6 @@ pages:
     name: "Reviews"
     menu: "Отзывы"
     path: "/reviews"
-    element: <Reviews />
     caption: "отзывы"
     background: "../assets/images/lines.png"
     
@@ -72,7 +66,6 @@ pages:
     name: "Contacts"
     menu: "Контакты"
     path: "/contacts"
-    element: <Contacts />
     caption: "Контакты"
-    background: "../assets/images/lines.png"
+    background: "../../assets/images/lines.png"
     

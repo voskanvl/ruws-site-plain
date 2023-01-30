@@ -1,7 +1,8 @@
 .main-header 
     .main-header__logo.logo 
-        include ../../assets/svg/logo.svg
+        include ../../../assets/svg/logo.svg
     nav.main-header__navbar.navbar.switcher 
-        each i in pages 
-            a.navbar__item(data-id= i.id, data-name= i.name)= i.menu
+        each i, idx in pages 
+            - const active = idx === 0
+            a.navbar__item(data-id= i.id, data-name= i.name, data-active= active)= i.menu
     .main-header__tel= common.phones.data[0]

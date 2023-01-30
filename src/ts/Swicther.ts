@@ -10,6 +10,11 @@ export class Switcher {
                 if (!(target as HTMLElement).classList.contains("navbar__item")) return;
                 const { id } = (target as HTMLElement).dataset;
                 !!id && this.store.setState(state => ({ ...state, activeScreenNumber: +id }));
+
+                const prevSwitch =
+                    this.switcherElement!.querySelector<HTMLElement>("[data-active]");
+                !!prevSwitch && prevSwitch.removeAttribute("data-active");
+                (target as HTMLElement).dataset.active = "true";
             });
     }
 }

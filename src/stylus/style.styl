@@ -66,26 +66,24 @@ section.screen
     inset: 0
     translate 0
     transition transform 1s cubic-bezier(1,0,0,1.5)
-    display grid
-    place-items center
+    background-repeat no-repeat
+    background-size cover
+    background-color #00
 
     &.left
         translate -100vw
     &.right
         translate 100vw
 
-    for i in colors
-        &[data-number=\"{i[0]}\"]
-            position fixed
-            z-index 0
-            inset: 0
-            background-color i[1]
 
-
+.main-title 
+    position absolute
+    left (207/1920)*100%
+    top (360/1087)*100vh
 
 @media (prefers-color-scheme: light)
     :root
-        color: #213547
+        color: #fff
         background-color: #ffffff
 
     a:hover
