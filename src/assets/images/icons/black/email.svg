@@ -1,0 +1,31 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_49_57)" filter="url(#filter0_bii_49_57)">
+<path d="M26.5156 20.2049L40.0006 28.7299V11.3199L26.5156 20.2049Z" fill="white" fill-opacity="0.01"/>
+<path d="M0 11.3199V28.7299L13.485 20.2049L0 11.3199Z" fill="white" fill-opacity="0.01"/>
+<path d="M37.5002 6.25H2.5002C1.2527 6.25 0.262695 7.18 0.0751953 8.3775L20.0002 21.505L39.9252 8.3775C39.7377 7.18 38.7477 6.25 37.5002 6.25Z" fill="white" fill-opacity="0.01"/>
+<path d="M24.2251 21.715L20.6876 24.045C20.4776 24.1825 20.2401 24.25 20.0001 24.25C19.7601 24.25 19.5226 24.1825 19.3126 24.045L15.7751 21.7125L0.0800781 31.64C0.272578 32.8275 1.25758 33.75 2.50008 33.75H37.5001C38.7426 33.75 39.7276 32.8275 39.9201 31.64L24.2251 21.715Z" fill="white" fill-opacity="0.01"/>
+</g>
+<defs>
+<filter id="filter0_bii_49_57" x="-48" y="-48" width="136" height="136" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="24"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_49_57"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_49_57" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_49_57"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="34"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_49_57" result="effect3_innerShadow_49_57"/>
+</filter>
+<clipPath id="clip0_49_57">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>

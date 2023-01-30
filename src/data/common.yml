@@ -1,0 +1,17 @@
+common:
+  address: 
+    data: "Россия, г. Пенза, Набережная реки Мойки, 39"
+    img: "../assets/images/icons/black/pin.png"
+    
+  phones: 
+    data: ["8 800 444-40-85", "+7 (8412) 20-25-85", "+7 (8412) 20-25-86"]
+    img: "../assets/images/icons/black/phone.png"
+  
+  email: 
+    data: "client@russiaws.ru"
+    img: "../assets/images/icons/black/email.png"
+
+  clock:
+    data: ["Пн-Пт: 09:00 – 18:00", "Сб-Вс: Выходной"]
+    img: "../assets/images/icons/black/clock.png"
+  

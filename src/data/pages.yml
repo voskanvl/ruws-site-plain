@@ -1,0 +1,78 @@
+pages:
+   
+  - id: 0
+    next: 1
+    previous: 6
+    name: "Home"
+    menu: "Главная"
+    path: "/"
+    element: <First />
+    caption: ""
+    background: "../assets/images/main.jpg"
+    
+    
+  - id: 1
+    next: 2
+    previous: 0
+    name: "Projects"
+    menu: "Проекты"
+    path: "/projects"
+    element: <Projects />
+    caption: ""
+    background: "../assets/images/main.jpg"
+    
+    
+  - id: 2
+    next: 3
+    previous: 1
+    name: "Services"
+    menu: "Услуги"
+    path: "/services"
+    element: <Services />
+    caption: ""
+    background: "../assets/images/lines.png"
+    
+    
+  - id: 3
+    next: 5
+    previous: 2
+    name: "Price"
+    menu: "Прайс"
+    path: "/price"
+    element: <Price />
+    caption: ""
+    background: "../assets/images/lines.png"
+    
+    
+  - id: 4
+    next: 5
+    previous: 3
+    name: "About"
+    menu: "О компании"
+    path: "/about"
+    element: <About />
+    caption: ""
+    background: "../assets/images/lines.png"
+    
+    
+  - id: 5
+    next: 6
+    previous: 4
+    name: "Reviews"
+    menu: "Отзывы"
+    path: "/reviews"
+    element: <Reviews />
+    caption: "отзывы"
+    background: "../assets/images/lines.png"
+    
+    
+  - id: 6
+    next: 0
+    previous: 5
+    name: "Contacts"
+    menu: "Контакты"
+    path: "/contacts"
+    element: <Contacts />
+    caption: "Контакты"
+    background: "../assets/images/lines.png"
+    

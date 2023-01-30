@@ -1,0 +1,31 @@
+@import "../../stylus/variables"
+.navbar 
+    flex 1
+    display flex
+    align-items center
+    justify-content space-between
+    cursor pointer
+    padding-inline 1em
+
+    &__item 
+        list-style none
+        position relative
+
+        &::after 
+            after()
+            width 0
+        
+
+        &:hover::after 
+            after()
+            width 100%
+        
+
+        &[data-active='true'] 
+            &::after 
+                after()
+                width 33%
+            
+        
+    
+

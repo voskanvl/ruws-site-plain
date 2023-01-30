@@ -1,0 +1,244 @@
+a:
+  - name: "РОСАТОМ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: "Государственная корпорация по атомной энергии «Росатом» – многопрофильный холдинг объединяющий активы в энергетике машиностроении строительстве. Его стратегия заключается в развитии низкоуглеродной генерации включая ветроэнергетику. Госкорпорация «Росатом» является национальным лидером в производстве электроэнергии (около 20% от общей выработки) и занимает первое место в мире по величине портфеля заказов на сооружение АЭС: на разной стадии реализации находятся 34 энергоблока в 11 странах. Росатом – единственная в мире компания которая обладает компетенциями во всей технологической цепочке ядерного топливного цикла от добычи природного урана до завершающей стадии жизненного цикла атомных объектов. В сферу ее деятельности входит также производство инновационной ядерной и неядерной продукции проведение научных исследований развитие Северного морского пути и экологических проектов включая создание экотехнопарков и государственной системы обращения с опасными промышленными отходами. Госкорпорация объединяет более 350 предприятий и организаций в которых работают свыше 290 тыс. человек. С октября 2020 года Госкорпорация «Росатом» является членом Глобального договора Организации Объединенных Наций (UN Global Compact) – крупнейшей международной инициативы ООН для бизнеса в сфере корпоративной социальной ответственности и устойчивого развития."
+  - name: "РОСТЕХ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: [
+        "В своей деятельности Ростех объединяет лучшие традиции отечественной инженерной мысли, новейшие технологические разработки и глубокую экспертизу.",
+        "Корпорация успешно налаживает связи между наукой и производством, разрабатывает перспективные технологии, внедряет передовые ноу-хау и способствует эффективной кооперации российских предприятий.",
+        "Профессиональный опыт и высокая квалификация специалистов Ростеха позволяют создавать уникальные продукты, открывая новые экспортные возможности. Именно поэтому Госкорпорация провозглашает своей глобальной целью – лидирующие позиции России в области высоких технологий и машиностроения.",
+    ]
+  - name: "РОСТЕЛЕКОМ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: [
+        "ПАО «Ростелеком» (www.company.rt.ru) — крупнейший в России интегрированный провайдер цифровых услуг и решений, который присутствует во всех сегментах рынка и охватывает миллионы домохозяйств, государственных и частных организаций.",
+        "Компания занимает лидирующие позиции на рынке услуг высокоскоростного доступа в интернет и платного телевидения. Количество клиентов услуг доступа в интернет с использованием оптических технологий составляет около 11 млн, платного ТВ «Ростелекома» — 11 млн пользователей, из них свыше 6,4 млн — IPTV.",
+    ]
+  - name: "РОСИНОВАЦИИ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: "ООО «РосИнновация» реализует проект ТранспортТВ – первая в России открытая мультимедийная платформа для предоставления сервисов и инфокоммуникационных услуг в общественном транспорте на основе навигационной системы ГЛОНАСС с интерактивными возможностями для пассажиров. «Транспорт-ТВ» реализует принципиально новый подход распространения информации в общественном транспорте: уникальный контент формируется централизованно и управляются по каналам мобильного Интернета (3G/LTE). Медиа-комплексы «Транспорт-ТВ» предусматривают возможность показа контента в привязке к географической зоне (геотаргетинг) на основании ГЛОНАСС координат и времени. о проекте ТранспортТВ - единственный проект в Томской области получивший поддержку Агентства стратегических инициатив при Правительстве РФ ТранспортТВ включен в перечень приоритетных проектов Кластера 'Информационные технологии и электроника Томской области'. ТранспортТВ – резидент фонда Сколково Транспорт ТВ  - победитель всероссийского конкурса инвестиционных проектов в сфере инфокоммуникационных технологий и телекоммуникаций Skonnect-2014 г."
+  - name: "РОСКОМСВОБОДА"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "МТС"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+  - name: "БИЛАЙН"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "МЕГАФОН"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ЛЕРУА МЕРЛЕН"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "МАГНИТ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "НОРИЛЬСКИЙ НИКЕЛЬ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "НЛМК"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+  - name: "БАЗОВЫЙ ЭЛЕМЕНТ"
+    prioritet: "main"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ВЕКТОР"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "СТАТУС"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "БАТЕРФЛЯЙ"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "СУДНИЦИН и Ко"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ГРИГОРИЙ и КАКИЕ-ТО"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "АДЕВИЛЬ"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "На Набережной"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ГУССТ №5"
+    prioritet: "light"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "САН"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "С УСАМ"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "СЕРАФИМ"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ХЕРУВИМ"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ЙЕРШАЛАИМ"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ТЕХНИКА"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "ШВСМ"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "НКВД"
+    prioritet: "lighter"
+    left: 0
+    top: 0
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""
+  - name: "KGBT+"
+    prioritet: "lighter"
+    translateX: 0
+    translateY: 0
+    show: false
+    about: ""

@@ -1,0 +1,32 @@
+{
+    "name": "admission-campaign",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite  --host",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "createComponent": " bash ./create-component.bash",
+        "tar": "tar -czvf rosatom.tar.gz ./dist"
+    },
+    "devDependencies": {
+        "css-has-pseudo": "^4.0.2",
+        "fast-glob": "^3.2.11",
+        "json-to-css": "^0.1.0",
+        "postcss-media-minmax": "^5.0.0",
+        "postcss-preset-env": "^7.8.3",
+        "postcss-transform-shortcut": "github:jonathantneal/postcss-transform-shortcut",
+        "typescript": "^4.6.4",
+        "vite": "^4.0.4",
+        "vite-plugin-pug-transformer": "^1.0.2"
+    },
+    "dependencies": {
+        "@cjting/vite-plugin-svg-sprite": "^0.2.1",
+        "@splidejs/splide": "^4.0.7",
+        "imask": "^6.4.3",
+        "js-yaml": "^4.1.0",
+        "stylus": "^0.59.0",
+        "zustand": "^4.1.5"
+    }
+}

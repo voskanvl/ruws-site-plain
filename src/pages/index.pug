@@ -1,0 +1,18 @@
+extends ../pug/templates/template.pug
+block main 
+    section.screen(data-number=0, class="current")
+        include ./screens/main.screen.pug
+    section.screen(data-number=1)
+        include ./screens/projects.screen.pug
+    section.screen(data-number=2)
+        include ./screens/service.screen.pug
+    section.screen(data-number=3)
+        include ./screens/price.screen.pug
+    section.screen(data-number=4)
+        include ./screens/about.screen.pug
+    section.screen(data-number=5)
+        include ./screens/reviews.screen.pug
+    section.screen(data-number=6)
+        include ./screens/contacts.screen.pug
+   
+
