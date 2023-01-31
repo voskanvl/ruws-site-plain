@@ -1,0 +1,60 @@
+@import "../../stylus/variables"
+.reviews-slide
+    position relative
+    height 70vh
+    & > *
+        position absolute
+        top 0
+        left 0
+        transition opacity 1s
+        z-index 0
+
+    &__front
+        display flex
+        flex-direction column
+        opacity 1
+        align-items center
+        cursor pointer
+        z-index 1
+
+        &:hover 
+            opacity 0
+            & + ^[0]__back
+                opacity 1
+    
+    &__image
+        border-radius 50%
+        overflow hidden
+        border: 1px solid #fffe
+        padding 8%
+        border-right: 1px solid #0000
+        rotate: -45deg
+
+        & > img
+            border-radius 50%
+            width 100%
+            rotate: 45deg
+            aspect-ratio: 1
+
+    &__back
+        opacity 0
+        width 100%
+        display flex
+        flex-direction column
+        align-items center
+        row-gap ph(29)
+
+    &__name
+        font-weight 700
+        font-size clamp(14px,36/768*100vw,36px)
+        color: #C3D0DF
+        padding-top 10px
+        padding-bottom ph(29)
+
+    &__stars
+        display flex
+        align-items center
+
+    &__comment
+        font-size clamp(12px,28/768*100vw,28px)
+        line-height 1.2

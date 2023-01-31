@@ -1,0 +1,13 @@
+mixin reviews-slide(val)
+    .reviews-slide
+        .reviews-slide__front
+            .reviews-slide__image
+                img(src= val.img)
+            .reviews-slide__name= val.name
+        .reviews-slide__back
+            .reviews-slide__name= val.name
+            .reviews-slide__stars 
+                each i in Array(5).fill(null).map((_,idx)=>idx)
+                    .star(data-type= i<=+val.mark-1?"white":"black")
+            .reviews-slide__comment= val.comment
+

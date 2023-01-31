@@ -1,3 +1,14 @@
 extends ../../../pug/templates/screen.pug
+include ../../../pug/splides.pug
+include ../../../components/reviewsSlide/reviewsSlide.pug
 
 block screen
+    .reviews
+        .reviews__work 
+            .reviews__control.reviews__control--left !{'\u27F5'}
+            .reviews__slider 
+                +splide("review",reviews)
+                    +reviews-slide(val)
+            .reviews__control.reviews__control--right !{'\u27F6'}
+        .reviews__footer 
+            button Подробнее
