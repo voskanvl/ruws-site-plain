@@ -17,6 +17,7 @@
         align-items center
         cursor pointer
         z-index 1
+        width 100%
 
         &:hover 
             opacity 0
@@ -27,15 +28,17 @@
         border-radius 50%
         overflow hidden
         border: 1px solid #fffe
-        padding 8%
+        // padding 8%
         border-right: 1px solid #0000
         rotate: -45deg
-        height 100%
+        display grid
+        place-items center
+        width 35vmin
         aspect-ratio 1
 
         & > img
             border-radius 50%
-            width 100%
+            width 80%
             rotate: 45deg
             aspect-ratio: 1
 
@@ -49,9 +52,9 @@
 
     &__name
         font-weight 700
-        font-size clamp(14px,36/768*100vw,36px)
+        font-size clamp(14px,36/1440*100vw,36px)
         color: #C3D0DF
-        padding-top 10px
+        padding-top ph(28)
         padding-bottom ph(29)
 
     &__stars
