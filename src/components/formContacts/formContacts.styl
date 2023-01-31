@@ -1,0 +1,41 @@
+.form-contacts 
+
+    &__input
+        display block
+        background none
+        border none
+        color #fff
+        font-size 18px
+        border-bottom 1px solid rgba(255,255,255,.7333333333)
+        margin-top ph(27)
+        width 100%
+        padding ph(13) 0
+
+    &__textarea 
+        background rgba(229,229,255,.14)
+        margin-top 27px
+        border-radius 20px
+        width 100%
+        padding 20px
+        resize none
+        color #fff
+
+    &__file
+        margin-top 20px
+        display block
+        cursor pointer
+        & > span
+            position relative
+            &::before 
+                content ""
+                position absolute
+                width 22px
+                height 2px
+                background #7A0404
+                left 0
+                top 2em
+                font-size 18px
+                font-weight 700
+
+    &__button 
+        margin-top ph(45)

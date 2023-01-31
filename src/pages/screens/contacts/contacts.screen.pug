@@ -1,0 +1,27 @@
+extends ../../../pug/templates/screen.pug
+include ../../../components/iconRow/iconRow.pug
+
+block screen
+    .contacts 
+        .contacts__map
+            img(src="../../../../assets/images/map.png" alt="black map")
+        .contacts__data
+            ul.contacts__list
+                li.contacts__li
+                    +icon-row(common.address.img)
+                        p= common.address.data
+                li.contacts__li
+                    +icon-row(common.phones.img)
+                        each i in common.phones.data
+                            a(href= "tel:"+i)= i
+                li.contacts__li
+                    +icon-row(common.email.img)
+                        a(href="mailto:"+common.email.data)= common.email.data
+                li.contacts__li
+                    +icon-row(common.clock.img)
+                        each i in common.clock.data
+                            p= i
+        .contacts__form
+            h2 Связаться с нами
+            include ../../../components/formContacts/formContacts.pug 
+
