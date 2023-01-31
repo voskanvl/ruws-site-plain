@@ -9,18 +9,18 @@ import * as fs from "fs";
 import * as path from "path";
 
 const merge = () => {
-    console.log(`now merging data files`);
-    // const fn = { json: JSON.stringify, yaml: yaml.load }[standart];
-    const fn = { json: JSON.stringify, yaml: yaml.load, yml: yaml.load };
+    const fn = { json: JSON.parse, yaml: yaml.load, yml: yaml.load };
     const files = readdirSync(resolve(__dirname, "src/data"));
-    // const jsons = files.filter(file => extname(file) === "." + STANDART);
-    return files.reduce(
+    console.log(`now merging data files`);
+    console.log("🚀 ~ files", files);
+    const result = files.reduce(
         (acc, file) => ({
             ...acc,
             ...fn[extname(file).slice(1)](readFileSync(resolve(__dirname, "src/data", file))),
         }),
         {},
     );
+    return result;
 };
 
 function htmlsFiles() {
