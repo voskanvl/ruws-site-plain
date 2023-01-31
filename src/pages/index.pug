@@ -1,25 +1,32 @@
 extends ../pug/templates/template.pug
 block main 
     - let image = pages[0].background
+    - title = pages[0].title
     section.screen(data-number=0, class="current", style=`background-image: url("${image}")`)
         include ./screens/main.screen.pug
     - image = pages[1].background
+    - title = pages[1].title
     section.screen(data-number=1, style=`background-image: url("${image}")`)
         include ./screens/projects.screen.pug
     - image = pages[2].background
+    - title = pages[2].title
     section.screen(data-number=2, style=`background-image: url("${image}")`)
         include ./screens/service.screen.pug
     - image = pages[3].background
+    - title = pages[3].title
     section.screen(data-number=3, style=`background-image: url("${image}")`)
         include ./screens/price.screen.pug
     - image = pages[4].background
+    - title = pages[4].title
     section.screen(data-number=4, style=`background-image: url("${image}")`)
         include ./screens/about.screen.pug
     - image = pages[5].background
+    - title = pages[5].title
     section.screen(data-number=5, style=`background-image: url("${image}")`)
         include ./screens/reviews.screen.pug
     - image = pages[6].background
+    - title = pages[6].title
     section.screen(data-number=6, style=`background-image: url("${image}")`)
         include ./screens/contacts.screen.pug
-   
+
 

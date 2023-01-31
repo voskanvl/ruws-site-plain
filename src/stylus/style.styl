@@ -68,7 +68,8 @@ section.screen
     transition transform 1s cubic-bezier(1,0,0,1.5)
     background-repeat no-repeat
     background-size cover
-    background-color #00
+    background-color #000
+    padding ph(41) pw(99) 0
 
     &.left
         translate -100vw
@@ -79,8 +80,24 @@ section.screen
 .main-title 
     position absolute
     font-size 5vmin
-    left (207/1920)*100%
-    top (360/1087)*100vh
+    left pw(207)
+    top ph(360)
+
+.page-title
+    margin-bottom (60/1010)*100vh
+    position relative
+    margin-left pw(35)
+    margin-top ph(190)
+    font-size 24px
+    &::before
+        content ""
+        background #7A0404
+        position absolute
+        top 0
+        bottom 0
+        width 5px
+        left -30px
+        font-weight 700
 
 @media (prefers-color-scheme: light)
     :root

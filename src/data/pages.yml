@@ -28,7 +28,7 @@ pages:
     path: "/services"
     caption: ""
     background: "../assets/images/lines.png"
-    
+    title: Что мы предлагаем
     
   - id: 3
     next: 5
@@ -38,6 +38,7 @@ pages:
     path: "/price"
     caption: ""
     background: "../assets/images/lines.png"
+    title: Что вы можете получить?
     
     
   - id: 4
@@ -48,6 +49,7 @@ pages:
     path: "/about"
     caption: ""
     background: "../assets/images/lines.png"
+    title: O нас
     
     
   - id: 5
@@ -58,6 +60,7 @@ pages:
     path: "/reviews"
     caption: "отзывы"
     background: "../assets/images/lines.png"
+    title: Отзывы
     
     
   - id: 6
@@ -68,4 +71,4 @@ pages:
     path: "/contacts"
     caption: "Контакты"
     background: "../../assets/images/lines.png"
-    
+    title: Контакты
