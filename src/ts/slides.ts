@@ -1,4 +1,4 @@
-import { MSplides } from "./initSlides";
+import { OptionSlide, SlideClass } from "./classSlides";
 export default function slides() {
     // const ranges = [0, 425, 768, 1024, 1440, Infinity];
     // const rangesTabs = [0, 468, 1323, Infinity];
@@ -15,38 +15,59 @@ export default function slides() {
     //     return res;
     // }
 
-    const splidesInstance = new MSplides();
-    const review = document.querySelector("#review");
+    const option: OptionSlide[] = [
+        {
+            elementName: "#review",
+            elementElement: document.querySelector("#review")!,
+            options: {
+                type: "loop",
+                arrows: false,
+                perPage: 3,
+                padding: "1em",
+                focus: "center",
+                pagination: false,
+            },
+            controls: {
+                left: document.querySelector<HTMLElement>(".reviews__control--left")!,
+                right: document.querySelector<HTMLElement>(".reviews__control--right")!,
+            },
+        },
+    ];
+    new SlideClass(option);
+
+    // const splidesInstance = new MSplides();
+    // const review = document.querySelector("#review");
+    // const about = document.querySelector("#about");
     // const interviews = document.querySelector("#interviews");
     // const interviews1 = document.querySelector("#interviews1");
     // const approach = document.querySelector("#approach ");
     // const interviews2 = document.querySelector("#interviews2");
 
-    !!review &&
-        splidesInstance.add("#review", {
-            type: "loop",
-            arrows: false,
-            perPage: 3,
-            padding: "1em",
-            focus: "center",
-            pagination: false,
-        });
-    const reviewSplide = splidesInstance.instances["#review"];
+    // !!review &&
+    //     splidesInstance.add("#review", {
+    //         type: "loop",
+    //         arrows: false,
+    //         perPage: 3,
+    //         padding: "1em",
+    //         focus: "center",
+    //         pagination: false,
+    //     });
+    // const reviewSplide = splidesInstance.instances["#review"];
 
-    const reviewControls: { left: HTMLElement | null; right: HTMLElement | null } = {
-        left: null,
-        right: null,
-    };
+    // const reviewControls: { left: HTMLElement | null; right: HTMLElement | null } = {
+    //     left: null,
+    //     right: null,
+    // };
 
-    reviewControls.left = document.querySelector<HTMLElement>(".reviews__control--left");
-    reviewControls.right = document.querySelector<HTMLElement>(".reviews__control--right");
+    // reviewControls.left = document.querySelector<HTMLElement>(".reviews__control--left");
+    // reviewControls.right = document.querySelector<HTMLElement>(".reviews__control--right");
 
-    Object.entries(reviewControls).forEach(([key, val]) => {
-        val?.addEventListener("click", () => {
-            if (key === "left") reviewSplide.go("<");
-            if (key === "right") reviewSplide.go(">");
-        });
-    });
+    // Object.entries(reviewControls).forEach(([key, val]) => {
+    //     val?.addEventListener("click", () => {
+    //         if (key === "left") reviewSplide.go("<");
+    //         if (key === "right") reviewSplide.go(">");
+    //     });
+    // });
 
     // interviews &&
     //     splidesInstance.add("#interviews", {
