@@ -1,0 +1,42 @@
+.about
+
+    &__title
+        font-size clamp(15px,36/1024*100vw,36px)
+        font-weight bold
+        margin ph(60) 0 ph(54)
+
+    &__year
+        cursor pointer
+
+    &__control
+        cursor pointer
+        font-size 30px
+        font-weight 100
+
+    &__slider
+        display flex
+        align-items center
+        width 50%
+        margin-bottom ph(48)
+
+        & .splide__slide
+            transition font-size .5s
+            font-size 1rem
+            color:#fff7
+            height 50px
+            display grid
+            place-items center
+
+            &.is-active
+                transform-origin center
+                font-size 30px
+                color: #fff
+            &.is-prev, &.is-next
+                font-size 25px
+                color:#fffa
+
+    &__tizer
+        display flex
+        align-items center
+        justify-content space-between
+

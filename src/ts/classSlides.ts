@@ -13,17 +13,22 @@ export interface OptionSlide {
 
 export class SlideClass {
     splidesInstance: MSplides | null = null; //TODO: maybe static
-    splides: Splide[] = [];
-    constructor(public data: OptionSlide[]) {
+    splides: Record<string, Splide> = {};
+
+    constructor(public data: Record<string, OptionSlide>) {
         if (!this.splidesInstance) this.splidesInstance = new MSplides();
-        this.splides = data
-            .filter(e => !!e.elementElement)
-            .map(e => {
-                const splide = this.splidesInstance!.add(e.elementName, e.options);
-                if (!e.controls) return splide;
-                e.controls.left.addEventListener("click", () => splide.go("<"));
-                e.controls.right.addEventListener("click", () => splide.go(">"));
-                return splide;
-            });
+        this.splides = Object.entries(data)
+            .filter(([_, val]) => !!val.elementElement)
+            .reduce((acc, [key, val]) => {
+                const splide = this.splidesInstance!.add(val.elementName, val.options);
+                if (!val.controls) return { ...acc, [key]: splide };
+                val.controls.left.addEventListener("click", () => {
+                    splide.go("<");
+                });
+                val.controls.right.addEventListener("click", () => {
+                    splide.go(">");
+                });
+                return { ...acc, [key]: splide };
+            }, {});
     }
 }

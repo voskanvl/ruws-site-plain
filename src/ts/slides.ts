@@ -15,25 +15,38 @@ export default function slides() {
     //     return res;
     // }
 
-    const option: OptionSlide[] = [
-        {
-            elementName: "#review",
-            elementElement: document.querySelector("#review")!,
-            options: {
-                type: "loop",
-                arrows: false,
-                perPage: 3,
-                padding: "1em",
-                focus: "center",
-                pagination: false,
-            },
-            controls: {
-                left: document.querySelector<HTMLElement>(".reviews__control--left")!,
-                right: document.querySelector<HTMLElement>(".reviews__control--right")!,
-            },
+    const review: OptionSlide = {
+        elementName: "#review",
+        elementElement: document.querySelector("#review")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 3,
+            focus: "center",
+            pagination: false,
         },
-    ];
-    new SlideClass(option);
+        controls: {
+            left: document.querySelector<HTMLElement>(".reviews__control--left")!,
+            right: document.querySelector<HTMLElement>(".reviews__control--right")!,
+        },
+    };
+    const about: OptionSlide = {
+        elementName: "#about",
+        elementElement: document.querySelector("#about")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 5,
+            focus: "center",
+            pagination: false,
+        },
+        controls: {
+            left: document.querySelector<HTMLElement>(".about__control--left")!,
+            right: document.querySelector<HTMLElement>(".about__control--right")!,
+        },
+    };
+
+    return new SlideClass({ review, about });
 
     // const splidesInstance = new MSplides();
     // const review = document.querySelector("#review");

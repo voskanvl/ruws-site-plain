@@ -1,20 +1,23 @@
 extends ../../../pug/templates/screen.pug
 include ../../../pug/splides
 include ../../../components/relativeRecord/relativeRecord.pug
+include ../../../components/tizerItem/tizerItem.pug
 
 block screen
     .about
         .about__tizer 
+            each i in aboutTizer
+                +tizerItem(i)
         .about__title Наши награды
         .about__slider
             .about__control.about__control--left !{'\u27F5'}
-            +splide("about",reviews)
-                div= val
+            +splide("about",about)
+                div.about__year= val.year
             .about__control.about__control--right !{'\u27F6'}
         .about__relative.relative-about
-            - const activeYear = (about.length/2)|0
+            - const activeYear = "2020"
             each i in about 
-                .relative-about__year(data-id= i.id, data-year= i.year, active= i.id===activeYear) 
+                .relative-about__year(data-id= i.id, data-year= i.year, active= i.year===activeYear) 
                     each j in i.records 
                         +relative-record(j)
 
