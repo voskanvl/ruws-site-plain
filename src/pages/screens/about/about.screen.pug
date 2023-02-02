@@ -1,3 +1,21 @@
 extends ../../../pug/templates/screen.pug
+include ../../../pug/splides
+include ../../../components/relativeRecord/relativeRecord.pug
 
 block screen
+    .about
+        .about__tizer 
+        .about__title Наши награды
+        .about__slider
+            .about__control.about__control--left !{'\u27F5'}
+            +splide("about",reviews)
+                div= val
+            .about__control.about__control--right !{'\u27F6'}
+        .about__relative.relative-about
+            - const activeYear = (about.length/2)|0
+            each i in about 
+                .relative-about__year(data-id= i.id, data-year= i.year, active= i.id===activeYear) 
+                    each j in i.records 
+                        +relative-record(j)
+
+
