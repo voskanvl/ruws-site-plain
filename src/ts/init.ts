@@ -23,4 +23,23 @@ export default function init() {
 
     new YearSwitcher(Store.aboutYear);
     switchYear(Store.aboutYear);
+
+    //переключение splide на about по нажатию на год
+    const splideList = document.querySelector<HTMLElement>(".splide__list");
+    !!splideList &&
+        splideList.addEventListener("click", ({ target }) => {
+            const targetEl = (target as HTMLElement).closest(".splide__slide");
+            if (
+                !targetEl ||
+                (!targetEl.classList.contains("is-next") && !targetEl.classList.contains("is-prev"))
+            )
+                return;
+            slidesInstances.splides["about"].go(
+                targetEl.classList.contains("is-next")
+                    ? ">"
+                    : targetEl.classList.contains("is-prev")
+                    ? "<"
+                    : "",
+            );
+        });
 }
