@@ -1,5 +1,4 @@
-import { StoreApi } from "zustand";
-import { StoreState } from "./store/store";
+import { StoreState, StoreApi } from "./store";
 
 export class Switcher {
     switcherElement: HTMLElement | null;
