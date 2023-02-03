@@ -7,6 +7,7 @@ import Store from "./store";
 import { Switcher } from "./Swicther";
 import switchYear from "./switchYear";
 import platformSwitcher from "./platformSwitcher";
+import productSwitcher from "./productSwitcher";
 
 export default function init() {
     const screens = new Screens(Store.screenStore);
@@ -46,11 +47,11 @@ export default function init() {
         });
 
     platformSwitcher();
+    productSwitcher();
 
     //подключаем .price-content к стору
     const priceContents = document.querySelectorAll<HTMLElement>(".price-content");
     Store.priceStore.subscribe(({ platform, product }: PriceStoreState) => {
-        product = 0;
         priceContents.forEach(e => e.classList.remove("show"));
         const priceContent = document.querySelector<HTMLElement>(
             `.price-content[data-id="${product}"]`,

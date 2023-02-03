@@ -9,4 +9,30 @@
         flex-direction column
         row-gap: ph(40)
 
+    &__products
+        display flex
+        align-items center
+        justify-content center
+        margin-bottom ph(69)
+        position relative
+        height ph(110)
+        &-control 
+            cursor pointer
+
+        & > .splide
+            width 80%
+            & .splide__list
+                align-items center
+            & .splide__slide
+                transition font-size .6s
+                &:not(.is-active)
+                    font-size clamp(15px,30/1024*100vw,30px)
+                &.is-active
+                    font-size clamp(40px,55/1024*100vw,55px)
+
         
+
+    &__switcher
+        line-height 2
+        text-align center
+        cursor pointer

@@ -8,7 +8,7 @@ block screen
         .price__products
             .price__products-control.price__products-control--left !{'\u27F5'}
             +splide("product", products)
-                div= val.name
+                .price__switcher(data-id=val.id)= val.name
             .price__products-control.price__products-control--right !{'\u27F6'}
         .price__main 
             .price__platforms

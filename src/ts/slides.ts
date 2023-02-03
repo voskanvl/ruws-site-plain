@@ -51,7 +51,8 @@ export default function slides() {
         options: {
             type: "loop",
             arrows: false,
-            perPage: 5,
+            perPage: 3,
+            perMove: 1,
             focus: "center",
             pagination: false,
         },
