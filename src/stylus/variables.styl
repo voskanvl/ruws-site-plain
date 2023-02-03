@@ -10,5 +10,12 @@ after()
 
 pw(x)
     (x/1920)*100vw
+
 ph(x)
     (x/1010)*100vh
+    
+transopacity()
+    opacity 0
+    transition opacity .6s
+    &.show
+        opacity 1

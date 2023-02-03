@@ -1,4 +1,3 @@
-import { PriceStoreState } from "./store/price";
 import { YearSwitcher } from "./YearSwitcher";
 import { Screens } from "../Screens";
 import randomLetters from "./randomLetters";
@@ -8,6 +7,7 @@ import { Switcher } from "./Swicther";
 import switchYear from "./switchYear";
 import platformSwitcher from "./platformSwitcher";
 import productSwitcher from "./productSwitcher";
+import connectComponentToPriceStore from "./connectComponentToPriceStore";
 
 export default function init() {
     const screens = new Screens(Store.screenStore);
@@ -49,22 +49,5 @@ export default function init() {
     platformSwitcher();
     productSwitcher();
 
-    //подключаем .price-content к стору
-    const priceContents = document.querySelectorAll<HTMLElement>(".price-content");
-    Store.priceStore.subscribe(({ platform, product }: PriceStoreState) => {
-        priceContents.forEach(e => e.classList.remove("show"));
-        const priceContent = document.querySelector<HTMLElement>(
-            `.price-content[data-id="${product}"]`,
-        );
-        priceContent?.classList.add("show");
-        const priceContentPlatforms = priceContent?.querySelectorAll<HTMLElement>(
-            ".price-content__platform",
-        );
-        priceContentPlatforms?.forEach(e => e.classList.remove("show"));
-
-        const priceContentPlatform = priceContent?.querySelector<HTMLElement>(
-            `.price-content__platform[data-platform='${platform}']`,
-        );
-        priceContentPlatform?.classList.add("show");
-    });
+    connectComponentToPriceStore(slidesInstances);
 }
