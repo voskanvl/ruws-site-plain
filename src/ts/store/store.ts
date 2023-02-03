@@ -1,5 +1,5 @@
 import create from "zustand/vanilla";
-import { Screens } from "../../Screens";
+import { devtools } from "zustand/middleware";
 export interface StoreState {
     block: boolean;
     activeScreenNumber: number;
@@ -32,15 +32,20 @@ const setScreenHandler = (x: number) => (state: StoreState) => {
     return { ...state, activeScreenNumber: x, previousScreenNumber: state.activeScreenNumber };
 };
 
-const store = create<StoreState>(set => ({
-    block: false,
-    activeScreenNumber: 0,
-    previousScreenNumber: 0,
-    min: 0,
-    max: document.querySelectorAll("section.screen").length - 1,
-    inc: () => set(inc),
-    dec: () => set(dec),
-    setScreen: x => set(setScreenHandler(x)),
-}));
+const store = create<StoreState, [["zustand/devtools", never]]>(
+    devtools(
+        set => ({
+            block: false,
+            activeScreenNumber: 0,
+            previousScreenNumber: 0,
+            min: 0,
+            max: document.querySelectorAll("section.screen").length - 1,
+            inc: () => set(inc),
+            dec: () => set(dec),
+            setScreen: (x: number) => set(setScreenHandler(x)),
+        }),
+        { name: "ScreenStore" },
+    ),
+);
 
 export default store;
