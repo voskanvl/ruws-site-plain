@@ -1,0 +1,22 @@
+.platform-details
+    display flex
+    justify-content space-between
+    padding-bottom ph(17)
+    border-bottom: 1px solid rgba(#E5E5E5,14%)
+    font-size 20px
+    position relative
+
+    &__chevron
+        & > img
+            transition transform .6s
+            rotate -90deg
+
+    & > input
+        position absolute
+        inset 0
+        z-index 2
+        cursor pointer
+        opacity 0
+
+        &:checked ~ .platform-details__chevron > img
+            rotate: 0

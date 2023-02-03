@@ -1,3 +1,4 @@
+import { PriceStoreState } from "./store/price";
 import { YearSwitcher } from "./YearSwitcher";
 import { Screens } from "../Screens";
 import randomLetters from "./randomLetters";
@@ -5,10 +6,11 @@ import slides from "./slides";
 import Store from "./store";
 import { Switcher } from "./Swicther";
 import switchYear from "./switchYear";
+import platformSwitcher from "./platformSwitcher";
 
 export default function init() {
-    const screens = new Screens(Store.store);
-    const switcher = new Switcher(Store.store);
+    const screens = new Screens(Store.screenStore);
+    const switcher = new Switcher(Store.screenStore);
 
     const bigmenuItems = document.querySelectorAll<HTMLElement>(".bigmenu-item");
     bigmenuItems.forEach((e, i) => setTimeout(() => randomLetters(e), 500 * i));
@@ -42,4 +44,26 @@ export default function init() {
                     : "",
             );
         });
+
+    platformSwitcher();
+
+    //подключаем .price-content к стору
+    const priceContents = document.querySelectorAll<HTMLElement>(".price-content");
+    Store.priceStore.subscribe(({ platform, product }: PriceStoreState) => {
+        product = 0;
+        priceContents.forEach(e => e.classList.remove("show"));
+        const priceContent = document.querySelector<HTMLElement>(
+            `.price-content[data-id="${product}"]`,
+        );
+        priceContent?.classList.add("show");
+        const priceContentPlatforms = priceContent?.querySelectorAll<HTMLElement>(
+            ".price-content__platform",
+        );
+        priceContentPlatforms?.forEach(e => e.classList.remove("show"));
+
+        const priceContentPlatform = priceContent?.querySelector<HTMLElement>(
+            `.price-content__platform[data-platform='${platform}']`,
+        );
+        priceContentPlatform?.classList.add("show");
+    });
 }

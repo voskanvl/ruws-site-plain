@@ -1,0 +1,46 @@
+transopacity()
+    opacity 0
+    transition opacity .6s
+    &.show
+        opacity 1
+
+.price-content
+    position relative
+    transopacity()
+    
+    &__title
+        font-weight bold
+        font-size clamp(15px,25/1024*100vw,25px)
+        color: #C3D0DF
+        margin-bottom ph(32)
+
+    &__text
+        font-size clamp(12px,25/1024*100vw,20px)
+        margin-bottom ph(64)
+
+    &__order
+        display flex
+        flex-direction column
+        row-gap ph(38)
+
+    &__cost
+    &__time
+        background url("../../../assets/images/icons/wallet.svg") no-repeat
+        background-position 0 50%
+        background-size contain
+        font-size clamp(15px,25/1024*100vw,25px)
+        font-weight bold
+        padding ph(10) 0 ph(10) pw(70) 
+
+
+    &__time
+        background-image url("../../../assets/images/icons/wall-clock.svg")
+
+    &__platform
+        position absolute
+        top 0
+        left 0
+        transopacity()
+
+
+    

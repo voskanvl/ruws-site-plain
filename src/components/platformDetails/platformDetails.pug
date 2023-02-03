@@ -1,0 +1,6 @@
+mixin platformDetails(platformItem)
+    .platform-details(data-id=platformItem.id)
+        input(type="radio" name="platform")
+        span.platform-details__name= platformItem.name
+        span.platform-details__chevron 
+            img(src="../../../assets/images/icons/black/chevron.svg" alt="platform-icon")

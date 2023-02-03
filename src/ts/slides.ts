@@ -45,8 +45,42 @@ export default function slides() {
             right: document.querySelector<HTMLElement>(".about__control--right")!,
         },
     };
+    const product: OptionSlide = {
+        elementName: "#product",
+        elementElement: document.querySelector("#product")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 5,
+            focus: "center",
+            pagination: false,
+        },
+        controls: {
+            left: document.querySelector<HTMLElement>(".price__products-control--left")!,
+            right: document.querySelector<HTMLElement>(".price__products-control--right")!,
+        },
+    };
 
-    return new SlideClass({ review, about });
+    const certificatesName = document.querySelectorAll<HTMLElement>(
+        ".price-details__platform-certificates > section.splide[id^='certificate']",
+    );
+    const certificates: Record<string, OptionSlide> = [...certificatesName].reduce(
+        (acc, e) => ({
+            ...acc,
+            [e.getAttribute("id")!]: {
+                elementName: `#${e.getAttribute("id")!}`,
+                elementElement: e,
+                options: {
+                    perPage: 1,
+                    pagination: true,
+                    arrows: false,
+                },
+            },
+        }),
+        {},
+    );
+
+    return new SlideClass({ review, about, product, ...certificates });
 
     // const splidesInstance = new MSplides();
     // const review = document.querySelector("#review");

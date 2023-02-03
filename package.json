@@ -19,7 +19,7 @@
         "postcss-transform-shortcut": "github:jonathantneal/postcss-transform-shortcut",
         "typescript": "^4.6.4",
         "vite": "^4.0.4",
-        "vite-plugin-pug-transformer": "^1.0.2"
+        "vite-plugin-pug-transformer": "^1.0.3"
     },
     "dependencies": {
         "@cjting/vite-plugin-svg-sprite": "^0.2.1",

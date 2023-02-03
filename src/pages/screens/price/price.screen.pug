@@ -1,3 +1,25 @@
 extends ../../../pug/templates/screen.pug
+include ../../../pug/splides.pug
+include ../../../components/priceContent/priceContent.pug
+include ../../../components/platformDetails/platformDetails.pug
 
 block screen
+    .price
+        .price__products
+            .price__products-control.price__products-control--left !{'\u27F5'}
+            +splide("product", products)
+                div= val.name
+            .price__products-control.price__products-control--right !{'\u27F6'}
+        .price__main 
+            .price__platforms
+                each i in platforms
+                    +platformDetails(i)
+            .price__details.price-details
+                .price-details__content
+                    each i in price
+                        +priceContent(i)
+                .price-details__certificates
+                    each i in platforms
+                        .price-details__platform-certificates(data-cert= i.id)
+                            +splide("certificate"+i.id,i.certificates)
+                                img(src= val)

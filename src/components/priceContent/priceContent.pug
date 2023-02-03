@@ -1,0 +1,12 @@
+include ../../pug/splides.pug
+
+mixin priceContent(priceItem)
+    .price-content(data-id=priceItem.id)
+        each platform in priceItem.platform
+            - const currentPlatform = platforms.find(e=>e.id===platform.id)
+            .price-content__platform(data-platform= platform.id)
+                .price-content__title= currentPlatform.title
+                .price-content__text= currentPlatform.text
+                .price-content__order 
+                    .price-content__cost= platform.cost
+                    .price-content__time= platform.time
