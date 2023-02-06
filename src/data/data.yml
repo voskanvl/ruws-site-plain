@@ -265,6 +265,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/308/300/200
+      - https://picsum.photos/id/309/300/200
+      - https://picsum.photos/id/310/300/200
+      - https://picsum.photos/id/311/300/200
   - id: 320
     name: "На Набережной"
     prioritet: "light"
@@ -274,6 +279,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/312/300/200
+      - https://picsum.photos/id/313/300/200
+      - https://picsum.photos/id/314/300/200
+      - https://picsum.photos/id/315/300/200
   - id: 321
     name: "ГУССТ №5"
     prioritet: "light"
@@ -283,6 +293,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/316/300/200
+      - https://picsum.photos/id/317/300/200
+      - https://picsum.photos/id/318/300/200
+      - https://picsum.photos/id/319/300/200
   - id: 322
     name: "САН"
     prioritet: "lighter"
@@ -292,6 +307,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/320/300/200
+      - https://picsum.photos/id/321/300/200
+      - https://picsum.photos/id/322/300/200
+      - https://picsum.photos/id/323/300/200
   - id: 323
     name: "С УСАМ"
     prioritet: "lighter"
@@ -301,6 +321,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/324/300/200
+      - https://picsum.photos/id/325/300/200
+      - https://picsum.photos/id/326/300/200
+      - https://picsum.photos/id/327/300/200
   - id: 324
     name: "СЕРАФИМ"
     prioritet: "lighter"
@@ -310,6 +335,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/328/300/200
+      - https://picsum.photos/id/329/300/200
+      - https://picsum.photos/id/330/300/200
+      - https://picsum.photos/id/331/300/200
   - id: 325
     name: "ХЕРУВИМ"
     prioritet: "lighter"
@@ -319,6 +349,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/332/300/200
+      - https://picsum.photos/id/333/300/200
+      - https://picsum.photos/id/334/300/200
+      - https://picsum.photos/id/335/300/200
   - id: 326
     name: "ЙЕРШАЛАИМ"
     prioritet: "lighter"
@@ -328,6 +363,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/336/300/200
+      - https://picsum.photos/id/337/300/200
+      - https://picsum.photos/id/338/300/200
+      - https://picsum.photos/id/339/300/200
   - id: 327
     name: "ТЕХНИКА"
     prioritet: "lighter"
@@ -337,6 +377,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/340/300/200
+      - https://picsum.photos/id/341/300/200
+      - https://picsum.photos/id/342/300/200
+      - https://picsum.photos/id/343/300/200
   - id: 328
     name: "ШВСМ"
     prioritet: "lighter"
@@ -346,6 +391,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/344/300/200
+      - https://picsum.photos/id/345/300/200
+      - https://picsum.photos/id/346/300/200
+      - https://picsum.photos/id/347/300/200
   - id: 329
     name: "НКВД"
     prioritet: "lighter"
@@ -355,6 +405,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/348/300/200
+      - https://picsum.photos/id/349/300/200
+      - https://picsum.photos/id/350/300/200
+      - https://picsum.photos/id/351/300/200
   - id: 330
     name: "KGBT+"
     prioritet: "lighter"
@@ -362,3 +417,8 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/352/300/200
+      - https://picsum.photos/id/353/300/200
+      - https://picsum.photos/id/354/300/200
+      - https://picsum.photos/id/355/300/200

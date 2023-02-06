@@ -12,6 +12,6 @@ include ../../../components/panel/panel.pug
         - const topPadding = (Math.random()*40)|0
         - const leftMargin= (Math.random()*50)|0
         .projects__item(class= i.prioritet, style=`padding-top: ${topPadding}%; margin-left: ${leftMargin}%;`)
-            span.projects__name= i.name
+            .projects__name(style=`--time-shift:${(Math.random()*1000)|0}ms; --time-duration:${(1000+Math.random()*2000)|0}ms`)= i.name
             .projects__panel
                 +panel(i)

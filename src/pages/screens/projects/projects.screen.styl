@@ -1,7 +1,7 @@
 coords(x,y)
     transform scale(1,1) translateX(x) translateY(y)
     opacity 1
-    z-index 2
+    z-index 11
 
 .projects
     display grid
@@ -30,10 +30,13 @@ coords(x,y)
         // max-width 200%
 
     &__item
+        perspective 500px
         user-select none
         cursor pointer
         position relative
         width 200%
+        z-index 1
+
         &.main 
             font-size 30px
         &.light 
@@ -48,12 +51,34 @@ coords(x,y)
             height 25px
             background #e51
             border-radius 50%
-            left -30px
+            left -40px
+
+        &:hover
+            z-index 2
 
         for j in (0..4)
             for i in (1..6)
                 &:nth-child({j * 6 + i}):hover  > ^[0]__panel
                     coords((i - 1) * -20%, j * -20%)
+
+    &__name
+        --time-shift 0ms
+        --time-duration 1s
+        width fit-content
+        transform-origin 50% 50%
+        animation wave var(--time-duration) var(--time-shift) infinite
+
+@keyframes wave 
+    0%
+        opacity .5
+        rotate 0 1 0  0deg 
+    50%
+        opacity 1
+        rotate 0 1 0  7deg 
+    100%
+        rotate 0 1 0  0deg 
+        opacity .5
+
 
 
 
