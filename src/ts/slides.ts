@@ -114,7 +114,43 @@ export default function slides() {
         },
     };
 
-    return new SlideClass({ review, about, product, ...certificates, services, partners });
+    const panelsName = document.querySelectorAll<HTMLElement>(
+        ".panel__slider > section.splide[id^='panel']",
+    );
+
+    const panels: Record<string, OptionSlide> = [...panelsName].reduce((acc, e) => {
+        return {
+            ...acc,
+            [e.getAttribute("id")!]: {
+                elementName: `#${e.getAttribute("id")!}`,
+                elementElement: e,
+                options: {
+                    type: "loop",
+                    perPage: 3,
+                    pagination: false,
+                    arrows: false,
+                },
+                controls: {
+                    left: e.parentElement!.querySelector<HTMLElement>(
+                        ".panel__slider-control--left",
+                    )!,
+                    right: e.parentElement!.querySelector<HTMLElement>(
+                        ".panel__slider-control--right",
+                    )!,
+                },
+            },
+        };
+    }, {});
+
+    return new SlideClass({
+        review,
+        about,
+        product,
+        ...certificates,
+        services,
+        partners,
+        ...panels,
+    });
 
     // const splidesInstance = new MSplides();
     // const review = document.querySelector("#review");

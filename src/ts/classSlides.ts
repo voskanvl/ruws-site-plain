@@ -22,12 +22,14 @@ export class SlideClass {
             .reduce((acc, [key, val]) => {
                 const splide = this.splidesInstance!.add(val.elementName, val.options);
                 if (!val.controls) return { ...acc, [key]: splide };
-                val.controls.left.addEventListener("click", () => {
-                    splide.go("<");
-                });
-                val.controls.right.addEventListener("click", () => {
-                    splide.go(">");
-                });
+                !!val.controls.left &&
+                    val.controls.left.addEventListener("click", () => {
+                        splide.go("<");
+                    });
+                !!val.controls.right &&
+                    val.controls.right.addEventListener("click", () => {
+                        splide.go(">");
+                    });
                 return { ...acc, [key]: splide };
             }, {});
     }

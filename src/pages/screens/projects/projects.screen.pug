@@ -1,3 +1,5 @@
+include ../../../components/panel/panel.pug
+
 .projects 
     - 
         for (let index = 0; index < data.length; index++) {
@@ -10,3 +12,4 @@
         - const topPadding = (Math.random()*50)|0
         - const leftMargin= (Math.random()*50)|0
         .projects__item(class= i.prioritet, style=`padding-top: ${topPadding}%; margin-left: ${leftMargin}%;`)= i.name
+            +panel(i)

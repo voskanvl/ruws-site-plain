@@ -1,0 +1,9 @@
+include ../../pug/splides.pug
+
+mixin panel(project)
+    .panel
+        .panel__slider
+            .panel__slider-control.panel__slider-control--left !{'\u27f5'}
+            +splide("panel"+project.id,[0,1,2,3,4])
+                .panel__slide= val
+            .panel__slider-control.panel__slider-control--right !{'\u27f6'}
