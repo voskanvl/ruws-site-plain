@@ -127,8 +127,10 @@ export default function slides() {
                 options: {
                     type: "loop",
                     perPage: 3,
+                    perMove: 1,
                     pagination: false,
                     arrows: false,
+                    focus: "center",
                 },
                 controls: {
                     left: e.parentElement!.querySelector<HTMLElement>(

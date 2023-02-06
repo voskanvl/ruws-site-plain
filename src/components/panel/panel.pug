@@ -2,8 +2,19 @@ include ../../pug/splides.pug
 
 mixin panel(project)
     .panel
-        .panel__slider
-            .panel__slider-control.panel__slider-control--left !{'\u27f5'}
-            +splide("panel"+project.id,[0,1,2,3,4])
-                .panel__slide= val
-            .panel__slider-control.panel__slider-control--right !{'\u27f6'}
+        if project.images && project.images.length
+            .panel__slider
+                .panel__slider-control.panel__slider-control--left !{'\u27f5'}
+                +splide("panel"+project.id, project.images||[])
+                    img.panel__slide(src= val)
+                .panel__slider-control.panel__slider-control--right !{'\u27f6'}
+        .panel__content
+            .panel__chapter
+                .panel__title О компании
+                .panel__text= project.about || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel faucibus lorem. Cras tincidunt vitae augue eget posuere. Nunc non quam fringilla nisl tempus malesuada. Nulla lorem dolor, egestas ac nuncnon, facilisis euismod lectus. Cras non odio vitae orci commodo hendrerit. Pellentesque in interdum nulla,sed convallis nibh. Vestibulum vitae ipsum eget orci congue tristique. Vivamus venenatis ex in nibh mollis."
+            .panel__chapter
+                .panel__title Движок
+                .panel__text= project.core || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel faucibus lorem. Cras tincidunt vitae augue eget posuere. Nunc non quam fringilla nisl tempus malesuada. Nulla lorem dolor, egestas ac nuncnon, facilisis euismod lectus. Cras non odio vitae orci commodo hendrerit. Pellentesque in interdum nulla,sed convallis nibh. Vestibulum vitae ipsum eget orci congue tristique. Vivamus venenatis ex in nibh mollis."
+            .panel__chapter
+                .panel__title Сайт
+                .panel__text= project.site || "www.www.www"

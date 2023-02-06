@@ -8,6 +8,11 @@ data:
     translateY: 0
     show: false
     about: "Государственная корпорация по атомной энергии «Росатом» – многопрофильный холдинг объединяющий активы в энергетике машиностроении строительстве. Его стратегия заключается в развитии низкоуглеродной генерации включая ветроэнергетику. Госкорпорация «Росатом» является национальным лидером в производстве электроэнергии (около 20% от общей выработки) и занимает первое место в мире по величине портфеля заказов на сооружение АЭС: на разной стадии реализации находятся 34 энергоблока в 11 странах. Росатом – единственная в мире компания которая обладает компетенциями во всей технологической цепочке ядерного топливного цикла от добычи природного урана до завершающей стадии жизненного цикла атомных объектов. В сферу ее деятельности входит также производство инновационной ядерной и неядерной продукции проведение научных исследований развитие Северного морского пути и экологических проектов включая создание экотехнопарков и государственной системы обращения с опасными промышленными отходами. Госкорпорация объединяет более 350 предприятий и организаций в которых работают свыше 290 тыс. человек. С октября 2020 года Госкорпорация «Росатом» является членом Глобального договора Организации Объединенных Наций (UN Global Compact) – крупнейшей международной инициативы ООН для бизнеса в сфере корпоративной социальной ответственности и устойчивого развития."
+    images: 
+      - https://picsum.photos/id/237/300/200
+      - https://picsum.photos/id/238/300/200
+      - https://picsum.photos/id/239/300/200
+      - https://picsum.photos/id/240/300/200
   - id: 302
     name: "РОСТЕХ"
     prioritet: "main"
@@ -21,6 +26,11 @@ data:
         "Корпорация успешно налаживает связи между наукой и производством, разрабатывает перспективные технологии, внедряет передовые ноу-хау и способствует эффективной кооперации российских предприятий.",
         "Профессиональный опыт и высокая квалификация специалистов Ростеха позволяют создавать уникальные продукты, открывая новые экспортные возможности. Именно поэтому Госкорпорация провозглашает своей глобальной целью – лидирующие позиции России в области высоких технологий и машиностроения.",
     ]
+    images: 
+      - https://picsum.photos/id/241/300/200
+      - https://picsum.photos/id/242/300/200
+      - https://picsum.photos/id/243/300/200
+      - https://picsum.photos/id/244/300/200
   - id: 303
     name: "РОСТЕЛЕКОМ"
     prioritet: "main"
@@ -33,6 +43,11 @@ data:
         "ПАО «Ростелеком» (www.company.rt.ru) — крупнейший в России интегрированный провайдер цифровых услуг и решений, который присутствует во всех сегментах рынка и охватывает миллионы домохозяйств, государственных и частных организаций.",
         "Компания занимает лидирующие позиции на рынке услуг высокоскоростного доступа в интернет и платного телевидения. Количество клиентов услуг доступа в интернет с использованием оптических технологий составляет около 11 млн, платного ТВ «Ростелекома» — 11 млн пользователей, из них свыше 6,4 млн — IPTV.",
     ]
+    images: 
+      - https://picsum.photos/id/245/300/200
+      - https://picsum.photos/id/246/300/200
+      - https://picsum.photos/id/247/300/200
+      - https://picsum.photos/id/248/300/200
   - id: 304
     name: "РОСИНОВАЦИИ"
     prioritet: "main"
@@ -42,6 +57,11 @@ data:
     translateY: 0
     show: false
     about: "ООО «РосИнновация» реализует проект ТранспортТВ – первая в России открытая мультимедийная платформа для предоставления сервисов и инфокоммуникационных услуг в общественном транспорте на основе навигационной системы ГЛОНАСС с интерактивными возможностями для пассажиров. «Транспорт-ТВ» реализует принципиально новый подход распространения информации в общественном транспорте: уникальный контент формируется централизованно и управляются по каналам мобильного Интернета (3G/LTE). Медиа-комплексы «Транспорт-ТВ» предусматривают возможность показа контента в привязке к географической зоне (геотаргетинг) на основании ГЛОНАСС координат и времени. о проекте ТранспортТВ - единственный проект в Томской области получивший поддержку Агентства стратегических инициатив при Правительстве РФ ТранспортТВ включен в перечень приоритетных проектов Кластера 'Информационные технологии и электроника Томской области'. ТранспортТВ – резидент фонда Сколково Транспорт ТВ  - победитель всероссийского конкурса инвестиционных проектов в сфере инфокоммуникационных технологий и телекоммуникаций Skonnect-2014 г."
+    images: 
+      - https://picsum.photos/id/249/300/200
+      - https://picsum.photos/id/250/300/200
+      - https://picsum.photos/id/251/300/200
+      - https://picsum.photos/id/252/300/200
   - id: 305
     name: "РОСКОМСВОБОДА"
     prioritet: "main"
@@ -51,6 +71,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/253/300/200
+      - https://picsum.photos/id/254/300/200
+      - https://picsum.photos/id/255/300/200
+      - https://picsum.photos/id/256/300/200
   - id: 306
     name: "МТС"
     prioritet: "main"
@@ -59,6 +84,11 @@ data:
     translateX: 0
     translateY: 0
     show: false
+    images: 
+      - https://picsum.photos/id/258/300/200
+      - https://picsum.photos/id/259/300/200
+      - https://picsum.photos/id/257/300/200
+      - https://picsum.photos/id/260/300/200
   - id: 307
     name: "БИЛАЙН"
     prioritet: "main"
@@ -68,6 +98,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/261/300/200
+      - https://picsum.photos/id/262/300/200
+      - https://picsum.photos/id/263/300/200
+      - https://picsum.photos/id/264/300/200
   - id: 308
     name: "МЕГАФОН"
     prioritet: "main"
@@ -77,6 +112,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/265/300/200
+      - https://picsum.photos/id/266/300/200
+      - https://picsum.photos/id/267/300/200
+      - https://picsum.photos/id/268/300/200
   - id: 309
     name: "ЛЕРУА МЕРЛЕН"
     prioritet: "main"
@@ -86,6 +126,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/269/300/200
+      - https://picsum.photos/id/270/300/200
+      - https://picsum.photos/id/271/300/200
+      - https://picsum.photos/id/272/300/200
   - id: 310
     name: "МАГНИТ"
     prioritet: "main"
@@ -95,6 +140,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/273/300/200
+      - https://picsum.photos/id/274/300/200
+      - https://picsum.photos/id/275/300/200
+      - https://picsum.photos/id/276/300/200
   - id: 311
     name: "НОРИЛЬСКИЙ НИКЕЛЬ"
     prioritet: "main"
@@ -104,6 +154,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/277/300/200
+      - https://picsum.photos/id/278/300/200
+      - https://picsum.photos/id/279/300/200
+      - https://picsum.photos/id/280/300/200
   - id: 312
     name: "НЛМК"
     prioritet: "main"
@@ -112,6 +167,11 @@ data:
     translateX: 0
     translateY: 0
     show: false
+    images: 
+      - https://picsum.photos/id/281/300/200
+      - https://picsum.photos/id/282/300/200
+      - https://picsum.photos/id/283/300/200
+      - https://picsum.photos/id/284/300/200
   - id: 313
     name: "БАЗОВЫЙ ЭЛЕМЕНТ"
     prioritet: "main"
@@ -121,6 +181,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/285/300/200
+      - https://picsum.photos/id/286/300/200
+      - https://picsum.photos/id/287/300/200
+      - https://picsum.photos/id/288/300/200
   - id: 314
     name: "ВЕКТОР"
     prioritet: "light"
@@ -130,6 +195,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/289/300/200
+      - https://picsum.photos/id/290/300/200
+      - https://picsum.photos/id/291/300/200
+      - https://picsum.photos/id/292/300/200
   - id: 315
     name: "СТАТУС"
     prioritet: "light"
@@ -139,6 +209,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/292/300/200
+      - https://picsum.photos/id/293/300/200
+      - https://picsum.photos/id/294/300/200
+      - https://picsum.photos/id/295/300/200
   - id: 316
     name: "БАТЕРФЛЯЙ"
     prioritet: "light"
@@ -148,6 +223,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/296/300/200
+      - https://picsum.photos/id/297/300/200
+      - https://picsum.photos/id/298/300/200
+      - https://picsum.photos/id/299/300/200
   - id: 317
     name: "СУДНИЦИН и Ко"
     prioritet: "light"
@@ -157,6 +237,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/300/300/200
+      - https://picsum.photos/id/301/300/200
+      - https://picsum.photos/id/302/300/200
+      - https://picsum.photos/id/303/300/200
   - id: 318
     name: "ГРИГОРИЙ и КАКИЕ-ТО"
     prioritet: "light"
@@ -166,6 +251,11 @@ data:
     translateY: 0
     show: false
     about: ""
+    images: 
+      - https://picsum.photos/id/304/300/200
+      - https://picsum.photos/id/305/300/200
+      - https://picsum.photos/id/306/300/200
+      - https://picsum.photos/id/307/300/200
   - id: 319
     name: "АДЕВИЛЬ"
     prioritet: "light"

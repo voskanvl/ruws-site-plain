@@ -1,14 +1,67 @@
 .panel
-    border-radius 20px
-    background #E5E5E57f
-    backdrop-filter blur(4px)
-    padding 4vmin
-    font-size 1rem
-    user-select none
+    position relative
+    display flex
+    flex-direction column
+    max-height 50vh
 
     &__slider
         display flex
         align-items center
+        margin-bottom ph(26)
+        column-gap pw(21)
+
 
         & > .splide 
+            max-width 40vw
+            text-align center
+
+            & .splide__slide
+                transition .6s
+                &:not(.is-active)
+                    scale 85% 85%
+                    opacity .5
+                &.is-active
+                    z-index 2
+
+    &__slider-control
+        color #060511
+        font-size 35px
+            
+    &__slide
+        border-radius 15px
+        overflow hidden
+
+    &__title
+        color #060511
+        font-size clamp(15px,20/1024*100vw,20px)
+        font-weight bold
+        margin-bottom ph(13)
+    
+    &__text
+            color #fff
+            font-size clamp(11px,16/1024*100vw,16px)
             width 100%
+            // white-space pre-wrap
+
+    &__content
+        display flex
+        flex-direction column
+        height auto
+        overflow auto
+        scroll-width 2px
+        &::-webkit-scrollbar
+            width 2px
+            background #060511
+        &::-webkit-scrollbar-thumb
+            background #fff
+            width 4px
+            border-radius 2px
+
+    &__chapter
+        display flex
+        flex-direction column
+        
+        &:not(:last-child)
+            margin-bottom ph(26)
+
+    

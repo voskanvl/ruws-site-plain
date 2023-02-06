@@ -9,7 +9,9 @@ include ../../../components/panel/panel.pug
             data = [...data.slice(0, insertIndex), e, ...data.slice(insertIndex)];
         }
     each i in data 
-        - const topPadding = (Math.random()*50)|0
+        - const topPadding = (Math.random()*40)|0
         - const leftMargin= (Math.random()*50)|0
-        .projects__item(class= i.prioritet, style=`padding-top: ${topPadding}%; margin-left: ${leftMargin}%;`)= i.name
-            +panel(i)
+        .projects__item(class= i.prioritet, style=`padding-top: ${topPadding}%; margin-left: ${leftMargin}%;`)
+            span.projects__name= i.name
+            .projects__panel
+                +panel(i)

@@ -1,18 +1,39 @@
+coords(x,y)
+    transform scale(1,1) translateX(x) translateY(y)
+    opacity 1
+    z-index 2
+
 .projects
     display grid
     grid-template-columns repeat(6,16%)
-    grid-template-rows repeat(6,16%)
+    grid-template-rows repeat(5,16%)
     position absolute
     width 90%
     top 22vh
     bottom 0
 
+    &__panel
+        border-radius 20px
+        background #E5E5E57f
+        backdrop-filter blur(4px)
+        padding 4vmin
+        font-size 1rem
+        user-select none
+        position absolute
+        opacity 0
+        // scale 0 0
+        // translate 0% 0%
+        transform scale(0,0) translate(0,0)
+        z-index -1
+        transition .6s
+        transform-origin 0 0
+        // max-width 200%
+
     &__item
         user-select none
         cursor pointer
         position relative
-        white-space nowrap
-
+        width 200%
         &.main 
             font-size 30px
         &.light 
@@ -28,4 +49,19 @@
             background #e51
             border-radius 50%
             left -30px
+
+        for j in (0..4)
+            for i in (1..6)
+                &:nth-child({j * 6 + i}):hover  > ^[0]__panel
+                    coords((i - 1) * -20%, j * -20%)
+
+
+
+
+
+
+            
+
+
+    
             
