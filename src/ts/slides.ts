@@ -30,6 +30,7 @@ export default function slides() {
             right: document.querySelector<HTMLElement>(".reviews__control--right")!,
         },
     };
+
     const about: OptionSlide = {
         elementName: "#about",
         elementElement: document.querySelector("#about")!,
@@ -45,6 +46,7 @@ export default function slides() {
             right: document.querySelector<HTMLElement>(".about__control--right")!,
         },
     };
+
     const product: OptionSlide = {
         elementName: "#product",
         elementElement: document.querySelector("#product")!,
@@ -65,6 +67,7 @@ export default function slides() {
     const certificatesName = document.querySelectorAll<HTMLElement>(
         ".price-details__platform-certificates > section.splide[id^='certificate']",
     );
+
     const certificates: Record<string, OptionSlide> = [...certificatesName].reduce(
         (acc, e) => ({
             ...acc,
@@ -81,7 +84,37 @@ export default function slides() {
         {},
     );
 
-    return new SlideClass({ review, about, product, ...certificates });
+    const services: OptionSlide = {
+        elementName: "#services",
+        elementElement: document.querySelector("#services")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 3,
+            perMove: 1,
+            focus: "center",
+            pagination: false,
+        },
+        controls: {
+            left: document.querySelector<HTMLElement>(".services__control--left")!,
+            right: document.querySelector<HTMLElement>(".services__control--right")!,
+        },
+    };
+
+    const partners: OptionSlide = {
+        elementName: "#partners",
+        elementElement: document.querySelector("#partners")!,
+        options: {
+            type: "loop",
+            arrows: false,
+            perPage: 7,
+            perMove: 1,
+            focus: "center",
+            pagination: false,
+        },
+    };
+
+    return new SlideClass({ review, about, product, ...certificates, services, partners });
 
     // const splidesInstance = new MSplides();
     // const review = document.querySelector("#review");

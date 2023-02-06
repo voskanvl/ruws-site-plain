@@ -1,3 +1,20 @@
 extends ../../../pug/templates/screen.pug
+include ../../../pug/splides.pug
+
 
 block screen
+    .services
+        .services__up-slider
+            .services__control.services__control--left !{'\u27F5'}
+            +splide("services",services)
+                .services__item 
+                    img(src= val.img)
+                    .services__item-name= val.name
+                    .services__item-caption= val.caption
+            .services__control.services__control--right !{'\u27F6'}
+        .services__partners
+            .services__title Наши партнеры
+            .services__down-slider
+                +splide("partners",partners)
+                    .services__item 
+                        img(src= val.img)
