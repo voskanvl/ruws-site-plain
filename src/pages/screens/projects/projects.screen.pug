@@ -1,1 +1,12 @@
-h1 PROJECTS
+.projects 
+    - 
+        for (let index = 0; index < data.length; index++) {
+            const e = data[index];
+            data.splice(index, 1);
+            const insertIndex = (Math.random() * (data.length - 1)) | 0;
+            data = [...data.slice(0, insertIndex), e, ...data.slice(insertIndex)];
+        }
+    each i in data 
+        - const topPadding = (Math.random()*50)|0
+        - const leftMargin= (Math.random()*50)|0
+        .projects__item(class= i.prioritet, style=`padding-top: ${topPadding}%; margin-left: ${leftMargin}%;`)= i.name

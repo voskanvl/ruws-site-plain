@@ -1,0 +1,30 @@
+.projects
+    display grid
+    grid-template-columns repeat(6,16%)
+    grid-template-rows repeat(6,16%)
+    position absolute
+    width 90%
+    top 22vh
+    bottom 0
+
+    &__item
+        cursor pointer
+        position relative
+        white-space nowrap
+
+        &.main 
+            font-size 30px
+        &.light 
+            font-size 20px
+        &.lighter 
+            font-size 10px
+
+        &::before
+            content ""
+            position absolute
+            width 25px
+            height 25px
+            background #e51
+            border-radius 50%
+            left -30px
+            
