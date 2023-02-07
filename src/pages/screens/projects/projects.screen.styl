@@ -5,8 +5,9 @@ coords(x,y)
 
 .projects
     display grid
-    grid-template-columns repeat(6,16%)
-    grid-template-rows repeat(5,16%)
+    grid-template-columns repeat(6,13%)
+    grid-template-rows repeat(5,13%)
+    gap 4%
     position absolute
     width 90%
     top 22vh
@@ -25,16 +26,17 @@ coords(x,y)
         // translate 0% 0%
         transform scale(0,0) translate(0,0)
         z-index -1
-        transition .6s
+        transition .6s .6s
         transform-origin 0 0
+        will-change transfom
         // max-width 200%
 
     &__item
+        --time-shift 0ms
+        --time-duration 1s
         perspective 500px
         user-select none
-        cursor pointer
         position relative
-        width 200%
         z-index 1
 
         &.main 
@@ -52,6 +54,7 @@ coords(x,y)
             background #e51
             border-radius 50%
             left -40px
+            animation wave var(--time-duration) var(--time-shift) infinite
 
         &:hover
             z-index 2
@@ -62,11 +65,12 @@ coords(x,y)
                     coords((i - 1) * -20%, j * -20%)
 
     &__name
-        --time-shift 0ms
-        --time-duration 1s
         width fit-content
         transform-origin 50% 50%
+        white-space nowrap
+        cursor pointer
         animation wave var(--time-duration) var(--time-shift) infinite
+
 
 @keyframes wave 
     0%
