@@ -17,11 +17,22 @@
 
             & .splide__slide
                 transition .6s
-                &:not(.is-active)
-                    scale 85% 85%
-                    opacity .5
+                opacity 0.5
+                scale 85% 85%
                 &.is-active
                     z-index 2
+                    opacity 1
+                    scale 1 1
+
+
+                // &:not(.is-active, .is-next, .is-prev)
+                //     scale 55% 55%
+                //     opacity .5
+                
+                &.is-prev
+                &.is-next
+                    opacity .8
+                    scale 85% 85%
                     
 
     &__slider-control

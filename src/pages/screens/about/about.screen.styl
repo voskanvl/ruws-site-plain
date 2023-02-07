@@ -5,8 +5,6 @@
         font-weight bold
         margin ph(60) 0 ph(54)
 
-    &__year
-        cursor pointer
 
     &__control
         cursor pointer
@@ -26,14 +24,19 @@
             height 50px
             display grid
             place-items center
+            pointer-events none
 
             &.is-active
+                pointer-events auto
                 transform-origin center
                 font-size 30px
                 color: #fff
+                cursor pointer
             &.is-prev, &.is-next
+                pointer-events auto
                 font-size 25px
                 color:#fffa
+                cursor pointer
 
     &__tizer
         display flex

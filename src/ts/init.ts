@@ -8,10 +8,11 @@ import switchYear from "./switchYear";
 import platformSwitcher from "./platformSwitcher";
 import productSwitcher from "./productSwitcher";
 import connectComponentToPriceStore from "./connectComponentToPriceStore";
+import scrollAboutSliderByClick from "./scrollAboutSliderByClick";
 
 export default function init() {
-    const screens = new Screens(Store.screenStore);
-    const switcher = new Switcher(Store.screenStore);
+    new Screens(Store.screenStore);
+    new Switcher(Store.screenStore);
 
     const bigmenuItems = document.querySelectorAll<HTMLElement>(".bigmenu-item");
     bigmenuItems.forEach((e, i) => setTimeout(() => randomLetters(e), 500 * i));
@@ -45,6 +46,7 @@ export default function init() {
                     : "",
             );
         });
+    !!slidesInstances.splides && scrollAboutSliderByClick(slidesInstances.splides["about"]);
 
     platformSwitcher();
     productSwitcher();

@@ -10,7 +10,7 @@ export class Screen {
     constructor(public screenEl: HTMLElement, private initilalStatus: StatusScreen) {
         this.number = screenEl.dataset.number;
         this.index = screenEl.dataset.number ? +screenEl.dataset.number : null;
-        this.status = initilalStatus;
+        this.status = this.initilalStatus;
     }
 
     public get status(): StatusScreen {
