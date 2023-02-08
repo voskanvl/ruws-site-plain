@@ -1,5 +1,6 @@
 extends ../pug/templates/template.pug
 block main 
+    include ../components/popup-menu/popup-menu.pug
     - let image = pages[0].background
     - title = pages[0].title
     - let style =  `background-image: url('${image}')`

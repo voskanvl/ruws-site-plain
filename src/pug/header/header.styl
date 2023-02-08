@@ -2,9 +2,24 @@
 .main-header
     display flex
     align-items center
+    justify-content space-between
     position fixed
     top 0
     left 0
     right 0
     z-index 100
     padding ph(41) pw(99) 0
+    column-gap 1vw
+
+    &__right
+        display flex
+        align-items center
+        justify-content space-between
+        column-gap 1vw
+
+    &__burger
+        display none
+        & > img 
+            width 100%
+        @media (max-width: 850px)
+            display block

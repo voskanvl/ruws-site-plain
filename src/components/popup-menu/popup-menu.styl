@@ -1,0 +1,18 @@
+.popup-menu
+    display flex
+    flex-direction column
+    row-gap 4vmin
+    padding 5vmin
+    padding-left 8vmin
+    height 100vh
+    background-color #fff3
+    backdrop-filter blur(4px)
+    position fixed
+    top 0
+    left -3vmin
+    z-index 100
+    translate -90% 0
+    transition .6s cubic-bezier(1,0,0,1.5)
+
+    &.show
+        translate 0% 0
