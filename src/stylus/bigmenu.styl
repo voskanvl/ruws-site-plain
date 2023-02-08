@@ -2,16 +2,18 @@
   position absolute
   display: flex
   column-gap: 99px
-  width: min-content
-  left: (1030/1920)*100%
+  width: fit-content
+  left: (1000/1920)*100%
   top: (596/1087)*100vh
+  flex-wrap wrap
+  row-gap 1.5vh
 
 a.bigmenu-item
     color #fff
     text-transform uppercase
     text-align left
     width min-content
-    font-size 30px
+    font-size 3vh
     line-height 1.5
     position relative
     width 150px
@@ -19,7 +21,8 @@ a.bigmenu-item
         content attr(data-number)
         position absolute
         color #ffffff55
-        bottom 100%
-        right 100%
+        top 0
+        left 0%
+        translate -100% -100%
         font-weight 800
-        font-size 20px
+        font-size 2vh
