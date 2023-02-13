@@ -1,19 +1,28 @@
 import { StoreState, StoreApi } from "./store";
 
 export class Switcher {
-    switcherElement: HTMLElement | null;
+    switcherElements: (HTMLElement | null)[];
     constructor(public store: StoreApi<StoreState>) {
-        this.switcherElement = document.querySelector<HTMLElement>(".switcher");
-        !!this.switcherElement &&
-            this.switcherElement.addEventListener("click", ({ target }: Event) => {
-                if (!(target as HTMLElement).classList.contains("navbar__item")) return;
-                const { id } = (target as HTMLElement).dataset;
-                !!id && this.store.setState(state => ({ ...state, activeScreenNumber: +id }));
+        this.switcherElements = [...document.querySelectorAll<HTMLElement>(".switcher")];
+        !!this.switcherElements &&
+            !!this.switcherElements.length &&
+            this.switcherElements.forEach(e =>
+                e.addEventListener("click", ({ target, currentTarget }: Event) => {
+                    const targetEl = target as HTMLElement;
+                    if (!targetEl.classList.contains("navbar__item")) return;
+                    const { id } = targetEl.dataset;
+                    !!id && this.store.setState(state => ({ ...state, activeScreenNumber: +id }));
 
-                const prevSwitch =
-                    this.switcherElement!.querySelector<HTMLElement>("[data-active]");
-                !!prevSwitch && prevSwitch.removeAttribute("data-active");
-                (target as HTMLElement).dataset.active = "true";
-            });
+                    const prevSwitch = e.querySelector<HTMLElement>("[data-active]");
+                    !!prevSwitch && prevSwitch.removeAttribute("data-active");
+                    targetEl.dataset.active = "true";
+
+                    if ((currentTarget as HTMLElement).classList.contains("popup-menu"))
+                        setTimeout(
+                            () => (currentTarget as HTMLElement).classList.remove("show"),
+                            800,
+                        );
+                }),
+            );
     }
 }

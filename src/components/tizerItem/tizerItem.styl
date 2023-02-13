@@ -2,11 +2,14 @@
     display flex
     flex-direction column
     align-items center
-    row-gap 50px
+    row-gap ph(50)
     &__number
-        font-size clamp(25px,100/1024*100vw,100px)
+        font-size calc(var(--index) * 3.9)
         font-weight bold
         color #C3D0DF
 
     &__title
         font-size clamp(11px,24/1024*100vw,24px)
+
+    @media (max-width 768px)
+        row-gap ph(23)

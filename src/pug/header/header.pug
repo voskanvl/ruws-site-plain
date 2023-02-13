@@ -1,6 +1,6 @@
 .main-header 
     .main-header__logo.logo 
-        include ../../../assets/svg/logo.svg
+        img(src="../../../assets/svg/logo.svg" alt="logo")
     nav.main-header__navbar.navbar.switcher 
         each i, idx in pages 
             - const active = idx === 0
@@ -8,4 +8,4 @@
     .main-header__right
         .main-header__burger
             img(src="../../../assets/svg/burger.svg" alt="burger")
-        .main-header__tel= common.phones.data[0]
+        a.main-header__tel(href="tel:/"+common.phones.data[0])= common.phones.data[0]

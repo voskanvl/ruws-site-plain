@@ -1,4 +1,4 @@
-.popup-menu 
+.popup-menu.switcher 
     each i, idx in pages 
         - const active = idx === 0
         a.navbar__item(data-id= i.id, data-name= i.name, data-active= active)= i.menu

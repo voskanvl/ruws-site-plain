@@ -3,5 +3,7 @@ mixin relative-record(data)
         .relative-record__icon 
             img(src= data.img, alt="icon")
         .relative-record__source= data.source
-        .relative-record__top= data.top
+        .relative-record__top
+            span= data.top
+            img.relative-record__chevron(src="../../../assets/images/icons/black/chevron.svg")
         .relative-record__nomination= data.nomination

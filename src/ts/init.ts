@@ -9,6 +9,8 @@ import platformSwitcher from "./platformSwitcher";
 import productSwitcher from "./productSwitcher";
 import connectComponentToPriceStore from "./connectComponentToPriceStore";
 import scrollAboutSliderByClick from "./scrollAboutSliderByClick";
+import burgerAsSwithPopup from "./burgerAsSwithPopup";
+import relativeRecordOpen from "./relativeRecordOpen";
 
 export default function init() {
     new Screens(Store.screenStore);
@@ -47,9 +49,12 @@ export default function init() {
             );
         });
     !!slidesInstances.splides && scrollAboutSliderByClick(slidesInstances.splides["about"]);
+    relativeRecordOpen();
 
     platformSwitcher();
     productSwitcher();
 
     connectComponentToPriceStore(slidesInstances);
+
+    burgerAsSwithPopup(document.querySelector<HTMLElement>(".main-header__burger"));
 }
