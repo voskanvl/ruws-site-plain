@@ -1,4 +1,5 @@
 import { OptionSlide, SlideClass } from "./classSlides";
+import debounce from "./debounce";
 export default function slides() {
     // const ranges = [0, 425, 768, 1024, 1440, Infinity];
     // const rangesTabs = [0, 468, 1323, Infinity];
@@ -112,6 +113,14 @@ export default function slides() {
             focus: "center",
             pagination: false,
         },
+        mediaMatch: {
+            "1920px": 7,
+            "1200px": 6,
+            "850px": 5,
+            "768px": 4,
+            "550px": 3,
+            "400px": 2,
+        },
     };
 
     const panelsName = document.querySelectorAll<HTMLElement>(
@@ -223,17 +232,16 @@ export default function slides() {
     //     };
     // }
 
-    // window.addEventListener(
-    //     "resize",
-    //     debounce(() => {
-    //         const perPage = matchRange(innerWidth, ranges);
-
-    //         splidesInstance.instances["#service-package"] &&
-    //             (splidesInstance.instances["#service-package"].options.perPage = perPage);
-    //         splidesInstance.instances["#service-package"] &&
-    //             splidesInstance.instances["#service-package"].refresh();
-    //     }, 200),
-    // );
+    window.addEventListener(
+        "resize",
+        debounce(() => {
+            // const perPage = matchRange(innerWidth, ranges);
+            // splidesInstance.instances["#service-package"] &&
+            //     (splidesInstance.instances["#service-package"].options.perPage = perPage);
+            // splidesInstance.instances["#service-package"] &&
+            //     splidesInstance.instances["#service-package"].refresh();
+        }, 200),
+    );
 
     // window.addEventListener(
     //     "resize",
