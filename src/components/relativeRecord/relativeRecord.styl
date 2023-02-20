@@ -9,15 +9,21 @@
     padding-bottom: 13px;
     transition var(--time)
     @media (max-width 768px)
-        grid-template-columns 50px 190px 1fr
+        grid-template-columns 50px 1fr 1fr
         grid-template-rows auto 0
+        column-gap 1vw
 
         & .relative-record__nomination
             grid-column 2 / -1
+    // @media (max-width 630px)
+    //     grid-template-columns 50px 1fr
+    //     grid-template-rows auto 0
 
     &__nomination
-        scale 1 0
         transition transform var(--time)
+        @media (max-width 768px)
+            scale 1 0
+            margin-block 10px
 
     &__chevron 
         rotate 0
@@ -34,8 +40,9 @@
                 display block
 
     &.show 
-        grid-template-rows auto 40px
-        & > .relative-record__nomination
-            scale 1 1
-        & .relative-record__chevron
-            rotate 180deg
+        @media (max-width 768px)
+            grid-template-rows auto 90px
+            & > .relative-record__nomination
+                scale 1 1
+            & .relative-record__chevron
+                rotate 180deg
