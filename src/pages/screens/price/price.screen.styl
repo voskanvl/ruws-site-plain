@@ -3,6 +3,18 @@
         display grid
         grid-template-columns repeat(2,49%)
         column-gap 1%
+        @media (max-width: 630px)
+            grid-template-columns 100%
+            overflow-y auto
+            scrollbar-width thin
+
+            &::-webkit-scrollbar
+                width 3px
+            &::-webkit-scrollbar-track
+                background linear-gradient(to right, transparent 45%, #fff7 45% 55%, transparent 55%)
+            &::-webkit-scrollbar-thumb
+                background #fff
+                border-radius 5px
 
     &__platforms
         display flex
@@ -26,13 +38,15 @@
             & .splide__slide
                 transition font-size .6s
                 &:not(.is-active)
-                    font-size clamp(15px,30/1024*100vw,30px)
+                    font-size clamp(12px,30/1024*100vw,30px)
                 &.is-active
-                    font-size clamp(40px,55/1024*100vw,55px)
+                    font-size clamp(15px,55/1024*100vw,55px)
 
         
 
     &__switcher
-        line-height 2
+        line-height 1
         text-align center
         cursor pointer
+
+    
