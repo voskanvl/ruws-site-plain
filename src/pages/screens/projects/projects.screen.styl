@@ -4,14 +4,27 @@ coords(x,y)
     z-index 11
 
 .projects
+    --x: 10%
     display grid
     grid-template-columns repeat(6,13%)
     grid-template-rows repeat(5,13%)
-    gap 4%
+    gap 1%
     position absolute
     width 90%
     top 22vh
     bottom 0
+    left var(--x)
+
+    // mq = (1440px 5 6) (1200px 4 7) (1024px 3 9)
+    // for i in mq
+    //     @media (max-width i[0])
+    //         grid-template-columns repeat(i[1], 96% / i[1] )
+    //         grid-template-rows repeat(i[2], 96% / i[2])
+
+    // @media (max-width 768px)
+    //         grid-template-columns 100%
+    //         grid-template-rows 50px
+    //         overflow-y auto
 
     &__panel
         border-radius 20px
@@ -38,20 +51,21 @@ coords(x,y)
         transition .6s .3s
 
         &.main 
-            font-size 30px
+            font-size calc(var(--index) * 1.5)
         &.light 
-            font-size 20px
+            font-size calc(var(--index) * 1)
         &.lighter 
-            font-size 10px
+            font-size calc(var(--index) * .5)
 
         &::before
             content ""
             position absolute
-            width 25px
-            height 25px
+            width calc(var(--index) * 1)
+            height calc(var(--index) * 1)
             background #e51
             border-radius 50%
-            left -40px
+            left ph(-45)
+            transform translateY(-50%)
             animation wave var(--time-duration) var(--time-shift) infinite
 
         &:hover
@@ -67,6 +81,7 @@ coords(x,y)
         transform-origin 50% 50%
         white-space nowrap
         cursor pointer
+        // font-size calc(var(--index) * 1.5)
         animation wave var(--time-duration) var(--time-shift) infinite
 
 

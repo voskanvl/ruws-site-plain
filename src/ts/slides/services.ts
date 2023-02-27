@@ -15,4 +15,9 @@ export const services: OptionSlide = {
         left: document.querySelector<HTMLElement>(".services__control--left")!,
         right: document.querySelector<HTMLElement>(".services__control--right")!,
     },
+    mediaMatch: {
+        "1920px": 3,
+        "768px": 2,
+        "580px": 1,
+    },
 };

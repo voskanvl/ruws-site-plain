@@ -4,6 +4,9 @@
     flex-direction column
     max-height 50vh
 
+    @media (max-height 580px)
+        max-height 70vh
+
     &__slider
         display flex
         align-items center
@@ -61,10 +64,10 @@
         flex-direction column
         height auto
         overflow auto
-        scroll-width 2px
+        scroll-width thin
         &::-webkit-scrollbar
             width 2px
-            background #060511
+            background transparent
         &::-webkit-scrollbar-thumb
             background #fff
             width 4px

@@ -1,3 +1,4 @@
+@import "../../../stylus/variables"
 .services
     display flex
     flex-direction column
@@ -12,18 +13,20 @@
     &__up-slider, &__down-slider
         display flex
         align-items center
-        width 100%
+        width 95%
     
         & .splide
             width 100%
 
     &__control
         cursor pointer
+        font-size calc(var(--index) * 1.2)
 
     &__item
         display grid
         place-items center
         row-gap ph(24)
+        
 
         & > *
             text-align center
@@ -32,6 +35,8 @@
             margin 0
         & > img 
             display block
+            aspect-ratio 1
+            width calc(var(--index) * 3)
 
     &__item-name
         font-weight bold
@@ -47,6 +52,3 @@
         font-size clamp(11px,36/1024*100vw,36px)
         color #C3D0DF
         margin-bottom ph(28)
-
-    &__control
-        font-size 36px

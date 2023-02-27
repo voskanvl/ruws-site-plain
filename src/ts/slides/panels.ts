@@ -24,6 +24,11 @@ export const panels: Record<string, OptionSlide> = [...panelsName].reduce((acc, 
                     ".panel__slider-control--right",
                 )!,
             },
+            mediaMatch: {
+                "1920px": 3,
+                "1200px": 2,
+                "768px": 1,
+            },
         },
     };
 }, {});

@@ -11,6 +11,7 @@ import connectComponentToPriceStore from "./connectComponentToPriceStore";
 import scrollAboutSliderByClick from "./scrollAboutSliderByClick";
 import burgerAsSwithPopup from "./burgerAsSwithPopup";
 import relativeRecordOpen from "./relativeRecordOpen";
+import moveProjectsByMouse from "./moveProjectsByMouse";
 
 export default function init() {
     new Screens(Store.screenStore);
@@ -57,4 +58,6 @@ export default function init() {
     connectComponentToPriceStore(slidesInstances);
 
     burgerAsSwithPopup(document.querySelector<HTMLElement>(".main-header__burger"));
+
+    moveProjectsByMouse();
 }
